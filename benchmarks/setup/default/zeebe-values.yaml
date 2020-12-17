@@ -80,6 +80,8 @@ env:
     value: "0.9"
   - name: ZEEBE_BROKER_DATA_USEMMAP
     value: "true"
+  - name: ZEEBE_BROKER_BACKPRESSURE_ENABLED
+    value: "false"
 
 # RESOURCES
 resources:
@@ -93,7 +95,7 @@ resources:
 # PVC
 pvcAccessMode: ["ReadWriteOnce"]
 pvcSize: 128Gi
-pvcStorageClassName: ssd
+# pvcStorageClassName: ssd
 
 
 # ELASTIC
@@ -106,7 +108,7 @@ elasticsearch:
 
   volumeClaimTemplate:
     accessModes: [ "ReadWriteOnce" ]
-    storageClassName: "ssd"
+    # storageClassName: "ssd"
     resources:
       requests:
         storage: 600Gi

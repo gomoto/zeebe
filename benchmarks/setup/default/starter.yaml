@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: starter
-        image: gcr.io/zeebe-io/starter:zeebe
+        image: gomoto/zeebe-starter:latest
         imagePullPolicy: Always
         env:
           - name: JAVA_OPTIONS
@@ -27,7 +27,7 @@ spec:
               -Dzeebe.client.requestTimeout=62000
               -XX:+HeapDumpOnOutOfMemoryError
           - name: LOG_LEVEL
-            value: "warn"
+            value: "debug"
         resources:
           limits:
             cpu: 2

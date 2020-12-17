@@ -3,7 +3,7 @@ all: zeebe starter timer simpleStarter worker
 
 .PHONY: zeebe
 zeebe:
-	-helm install default zeebe/zeebe-cluster -f zeebe-values.yaml --skip-crds
+	-helm install default zeebe/zeebe-cluster -f zeebe-values.yaml
 	-kubectl apply -f curator-cronjob.yaml
 	-kubectl apply -f curator-configmap.yaml
 
@@ -11,7 +11,7 @@ zeebe:
 # To apply the templates use k apply -f zeebe-cluster/templates/
 .PHONY: zeebe-template
 zeebe-template:
-	-helm template default zeebe/zeebe-cluster -f zeebe-values.yaml --skip-crds --output-dir .
+	-helm template default zeebe/zeebe-cluster -f zeebe-values.yaml --output-dir .
 
 .PHONY: update
 update:
