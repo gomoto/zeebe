@@ -1,0 +1,4 @@
+resources:
+  - ./all.yaml
+patches:
+  - ./broker-statefulset.yaml

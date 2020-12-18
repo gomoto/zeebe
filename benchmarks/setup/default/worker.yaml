@@ -28,7 +28,7 @@ spec:
               -Dapp.worker.completionDelay=50ms
               -XX:+HeapDumpOnOutOfMemoryError
           - name: LOG_LEVEL
-            value: "debug"
+            value: "info"
         resources:
           limits:
             cpu: 4

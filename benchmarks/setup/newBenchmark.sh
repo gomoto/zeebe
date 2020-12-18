@@ -24,7 +24,7 @@ cp -rv default/ $namespace
 cd $namespace
 
 # calls OS specific sed inplace function
-sed_inplace "s/default/$namespace/g" Makefile starter.yaml timer.yaml simpleStarter.yaml worker.yaml
+sed_inplace "s/default/$namespace/g" Makefile starter.yaml timer.yaml simpleStarter.yaml worker.yaml post-renderers/*
 
 # get latest updates from zeebe repo
 helm repo update
